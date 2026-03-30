@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BANYON STREET | Premium Editorial E-Commerce</title>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Locked Screen Overlay -->
+    <div id="locked-screen">
+        <h1 class="locked-brand fade-in">BANYON STREET</h1>
+        <div class="countdown fade-in">
+            <div class="time-block"><span class="time-val" id="days">00</span><span class="time-label">Days</span></div>
+            <div class="time-block"><span class="time-val" id="hours">00</span><span class="time-label">Hours</span></div>
+            <div class="time-block"><span class="time-val" id="mins">00</span><span class="time-label">Mins</span></div>
+            <div class="time-block"><span class="time-val" id="secs">00</span><span class="time-label">Secs</span></div>
+        </div>
+        <p class="locked-tagline fade-in" style="max-width: 500px; text-align: center; font-size: 0.85rem; letter-spacing: 0.15em; line-height: 1.8; margin-bottom: 2rem; color: rgba(255,255,255,0.7);">SOME THINGS ARE WORTH BEING EARLY FOR.</p>
+        <div class="locked-form fade-in">
+            <input type="email" placeholder="SIGN UP FOR EARLY ACCESS">
+            <button>Join The Family</button>
+        </div>
+        <button id="enter-site-btn" class="enter-site fade-in">ENTER SITE ALREADY (DEV BYPASS)</button>
+    </div>
+
+    <!-- Header / Navigation -->
+    <header>
+        <div class="logo"><a href="index.html">Banyon Street</a></div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="lookbook.html">Lookbook</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="cart-icon">
+            <a href="#">Cart (0)</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="Editorial Fashion Hero" class="hero-img">
+            <div class="hero-content">
+                <h1 class="fade-in">SOME FEELINGS NEVER FADE.</h1>
+                <p class="fade-in">SOME THINGS WERE ALWAYS MEANT TO LAST. THERE IS BEAUTY AND WONDER RIGHT WHERE YOU ARE. WELCOME TO BANYON STREET.</p>
+            </div>
+        </section>
+
+        <!-- Featured Collections -->
+        <section class="featured-collections">
+            <a href="shop.html" class="collection-item">
+                <img src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Tops Category" class="collection-img">
+                <div class="collection-info fade-in">
+                    <h3>Heavyweight Tops</h3>
+                    <span class="btn">Shop Now</span>
+                </div>
+            </a>
+            <a href="shop.html" class="collection-item">
+                <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Bottoms Category" class="collection-img">
+                <div class="collection-info fade-in">
+                    <h3>Textured Bottoms</h3>
+                    <span class="btn">Shop Now</span>
+                </div>
+            </a>
+        </section>
+
+        <!-- Lookbook Tease -->
+        <section class="section-padding container lookbook-teaser">
+            <div class="section-header fade-in">
+                <h2>Editorial Vision</h2>
+                <p>Behind the scenes of Collection 01</p>
+            </div>
+            <div class="lookbook-grid">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Look 1" class="fade-in">
+                <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Look 2" class="fade-in" style="margin-top: 40px;">
+                <img src="https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Look 3" class="fade-in">
+            </div>
+            <div style="margin-top: var(--spacing-md);" class="fade-in">
+                <a href="lookbook.html" class="btn btn-primary">View Full Lookbook</a>
+            </div>
+        </section>
+
+        <!-- About Tease -->
+        <section class="section-padding container">
+            <div class="about-tease">
+                <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Brand Story" class="about-tease-img fade-in">
+                <div class="about-tease-content fade-in">
+                    <h2>Our Genesis</h2>
+                    <p>Banyon Street was founded on the intersection of raw architectural utility and refined negative space. We believe in creating garments that outlast trends through uncompromising quality.</p>
+                    <a href="about.html" class="btn">Read Our Story</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Email Sign Up Overlay -->
+        <section class="newsletter-section">
+            <img src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="Newsletter Background" class="newsletter-bg">
+            <div class="newsletter-content fade-in">
+                <h2>Join The Family</h2>
+                <p>SOME THINGS ARE WORTH BEING EARLY FOR.<br>Sign up for early access on the latest product releases, special offers and news.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-top">
+            <div class="footer-col">
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="shop.html">All Products</a></li>
+                    <li><a href="shop.html">Tops</a></li>
+                    <li><a href="shop.html">Bottoms</a></li>
+                    <li><a href="shop.html">Accessories</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Brand</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="lookbook.html">Lookbook</a></li>
+                    <li><a href="contact.html">Journal</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="contact.html">FAQ</a></li>
+                    <li><a href="contact.html">Shipping & Returns</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">Follow us for behind the scenes and early drop info.</p>
+                <div class="social-icons">
+                    <a href="#">IG</a>
+                    <a href="#">TK</a>
+                    <a href="#">X</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Location</h4>
+                <p style="font-size: 0.9rem;">AUSTIN, TX</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 BANYON STREET. All Rights Reserved.</p>
+            <div>
+                <a href="#" style="margin-right: 1rem;">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

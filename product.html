@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heavyweight Hoodie | BANYON STREET</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .product-layout {
+            display: flex;
+            padding-top: calc(var(--spacing-xl) + 60px);
+            min-height: 100vh;
+        }
+
+        .product-gallery {
+            flex: 6;
+            display: flex;
+            gap: 2px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            padding: 0 4vw;
+        }
+
+        .product-gallery::-webkit-scrollbar {
+            display: none;
+        }
+
+        .product-gallery img {
+            width: 100%;
+            height: 80vh;
+            object-fit: contain;
+            background: var(--color-light-gray);
+            scroll-snap-align: center;
+        }
+
+        .product-details,
+        .product-sidebar {
+            flex: 4;
+            padding: 0 4vw var(--spacing-xl);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-sidebar {
+            position: sticky;
+            top: 100px;
+            height: calc(100vh - 100px);
+            overflow-y: auto;
+        }
+
+        .breadcrumb {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--color-accent);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .p-title {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .p-price {
+            font-size: 1.25rem;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .size-selector {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .size-head {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .size-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .size-btn {
+            border: 1px solid var(--color-border);
+            padding: 0.75rem 0;
+            text-align: center;
+            font-size: 0.9rem;
+            transition: var(--transition-fast);
+        }
+
+        .size-btn:hover,
+        .size-btn.active {
+            border-color: var(--color-text);
+            background: var(--color-text);
+            color: var(--color-bg);
+        }
+
+        .add-to-cart {
+            width: 100%;
+            padding: 1.25rem;
+            background: var(--color-text);
+            color: var(--color-bg);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 0.9rem;
+            margin-bottom: var(--spacing-md);
+            transition: opacity 0.3s;
+        }
+
+        .add-to-cart:hover {
+            opacity: 0.8;
+        }
+
+        .p-desc {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--color-accent);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .accordion {
+            border-top: 1px solid var(--color-border);
+        }
+
+        .accordion-item {
+            border-bottom: 1px solid var(--color-border);
+            padding: 1rem 0;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Editorial styling shots below */
+        .styling-shots {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-md);
+            padding: 0 4vw var(--spacing-xl);
+        }
+
+        @media (max-width: 900px) {
+            .product-layout {
+                flex-direction: column;
+            }
+
+            .product-sidebar {
+                position: relative;
+                top: 0;
+                height: auto;
+                padding-top: var(--spacing-md);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header / Navigation -->
+    <header
+        style="background: var(--color-bg); mix-blend-mode: normal; color: var(--color-text); border-bottom: 1px solid var(--color-light-gray);">
+        <div class="logo"><a href="index.html">Banyon Street</a></div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="lookbook.html">Lookbook</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="cart-icon">
+            <a href="#">Cart (0)</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="product-layout">
+            <div class="product-gallery">
+                <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80"
+                    alt="Hoodie Front">
+            </div>
+
+            <div class="product-sidebar">
+                <div class="breadcrumb">Shop / Tops / Heavyweight Hoodie</div>
+                <h1 class="p-title">Heavyweight Hoodie - Onyx</h1>
+                <div class="p-price">$120</div>
+
+                <p class="p-desc">Constructed from 500gsm custom-milled French terry cotton. A cropped, boxy fit with
+                    dropped shoulders designed to drape naturally. Washed down for a vintage hand-feel.</p>
+
+                <div class="size-selector">
+                    <div class="size-head">
+                        <span>Select Size</span>
+                        <span style="text-decoration:underline; cursor:pointer;">Size Guide</span>
+                    </div>
+                    <div class="size-grid">
+                        <button class="size-btn">S</button>
+                        <button class="size-btn">M</button>
+                        <button class="size-btn active">L</button>
+                        <button class="size-btn">XL</button>
+                    </div>
+                </div>
+
+                <button class="add-to-cart">Add to Cart</button>
+
+                <div class="accordion">
+                    <div class="accordion-item" onclick="this.classList.toggle('open')">
+                        <div style="display:flex;justify-content:space-between;width:100%;cursor:pointer;">
+                            <span>Details & Fit</span>
+                            <span class="acc-icon">+</span>
+                        </div>
+                        <div class="acc-body" style="display:none;margin-top:1rem;font-size:0.9rem;line-height:1.6;color:var(--color-accent);text-transform:none;letter-spacing:0;">
+                            Constructed from 500gsm custom-milled French terry cotton. Cropped, boxy fit with dropped shoulders. Washed down for a vintage hand-feel.
+                        </div>
+                    </div>
+                    <div class="accordion-item" onclick="this.classList.toggle('open')">
+                        <div style="display:flex;justify-content:space-between;width:100%;cursor:pointer;">
+                            <span>Materials & Care</span>
+                            <span class="acc-icon">+</span>
+                        </div>
+                        <div class="acc-body" style="display:none;margin-top:1rem;font-size:0.9rem;line-height:1.6;color:var(--color-accent);text-transform:none;letter-spacing:0;">
+                            100% Premium Cotton. Machine wash cold, hang dry. Do not bleach.
+                        </div>
+                    </div>
+                    <div class="accordion-item" onclick="this.classList.toggle('open')">
+                        <div style="display:flex;justify-content:space-between;width:100%;cursor:pointer;">
+                            <span>Shipping & Returns</span>
+                            <span class="acc-icon">+</span>
+                        </div>
+                        <div class="acc-body" style="display:none;margin-top:1rem;font-size:0.9rem;line-height:1.6;color:var(--color-accent);text-transform:none;letter-spacing:0;">
+                            Please allow 3-5 business days for order processing and verification, and an additional 7-10 business days for delivery. We are not responsible for any lost, stolen, or damaged shipments. The buyer assumes all responsibilities of claims made with the shipping carrier.
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    document.querySelectorAll('.accordion-item').forEach(item => {
+                        item.addEventListener('click', () => {
+                            const body = item.querySelector('.acc-body');
+                            const icon = item.querySelector('.acc-icon');
+                            if (body) {
+                                const isOpen = body.style.display === 'block';
+                                body.style.display = isOpen ? 'none' : 'block';
+                                if (icon) icon.textContent = isOpen ? '+' : '−';
+                            }
+                        });
+                    });
+                </script>
+            </div>
+        </div>
+
+        <section class="container" style="padding-bottom: var(--spacing-xl);">
+            <h3 style="text-align: center; margin-bottom: var(--spacing-md);">Editorial Notes</h3>
+            <div class="styling-shots fade-in">
+                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80"
+                    alt="Style 1">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80"
+                    alt="Style 2">
+            </div>
+            <p style="text-align: center; max-width: 600px; margin: 0 auto; color: var(--color-accent);">Model is 6'1"
+                wearing size L for an oversized fit.</p>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

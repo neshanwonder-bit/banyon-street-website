@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lookbook | BANYON STREET</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .lookbook-header {
+            padding: calc(var(--spacing-xl) + 60px) 4vw var(--spacing-lg);
+            text-align: center;
+        }
+
+        .split-layout {
+            display: flex;
+            height: 100vh;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .split-sticky {
+            flex: 1;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4vw;
+            background: var(--color-bg);
+            z-index: 10;
+        }
+
+        .split-sticky h2 {
+            font-size: 4rem;
+            line-height: 1;
+            text-transform: uppercase;
+        }
+
+        .split-scroll {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .split-scroll img {
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+        }
+
+        .full-width-lb {
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .grid-lb {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--spacing-md);
+            padding: 0 4vw var(--spacing-xl);
+        }
+
+        .grid-lb img {
+            width: 100%;
+            height: 80vh;
+            object-fit: cover;
+        }
+
+        @media (max-width: 900px) {
+            .split-layout {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .split-sticky {
+                position: relative;
+                height: 30vh;
+            }
+
+            .grid-lb {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header / Navigation -->
+    <header style="background: transparent; color: var(--color-text);">
+        <div class="logo"><a href="index.html">Banyon Street</a></div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="lookbook.html">Lookbook</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="cart-icon">
+            <a href="#">Cart (0)</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="lookbook-header">
+            <h1 class="fade-in">Collection 01: The Form</h1>
+            <p class="fade-in">Explorations in shape, weight, and negative space.</p>
+        </div>
+
+        <img src="https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?ixlib=rb-4.0.3&auto=format&fit=crop&w=2500&q=80"
+            class="full-width-lb fade-in" alt="Lookbook Full">
+
+        <div class="split-layout">
+            <div class="split-sticky">
+                <h2>Behind<br>The<br>Scenes</h2>
+            </div>
+            <div class="split-scroll">
+                <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80"
+                    alt="Scroll 1">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80"
+                    alt="Scroll 2">
+            </div>
+        </div>
+
+        <div class="grid-lb fade-in">
+            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80"
+                alt="Grid 1">
+            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80"
+                alt="Grid 2">
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

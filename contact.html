@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | BANYON STREET</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .contact-wrap {
+            padding: calc(var(--spacing-xl) + 60px) 4vw var(--spacing-xl);
+            display: flex;
+            gap: var(--spacing-xl);
+            max-width: 1200px;
+            margin: 0 auto;
+            min-height: 80vh;
+        }
+
+        .contact-info,
+        .contact-form-area {
+            flex: 1;
+        }
+
+        .contact-info h1 {
+            font-size: 3rem;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .info-block {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .info-block h4 {
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+            color: var(--color-accent);
+        }
+
+        .info-block p {
+            color: var(--color-text);
+            font-size: 1.1rem;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-md);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            background: transparent;
+            border: 1px solid var(--color-border);
+            font-family: var(--font-primary);
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: var(--color-text);
+        }
+
+        .form-group textarea {
+            height: 150px;
+            resize: none;
+        }
+
+        .faq {
+            margin-top: var(--spacing-xl);
+            border-top: 1px solid var(--color-border);
+        }
+
+        .faq h3 {
+            margin: var(--spacing-md) 0;
+            font-size: 2rem;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--color-border);
+            padding: 1rem 0;
+        }
+
+        .faq-q {
+            font-weight: 500;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .faq-a {
+            margin-top: 1rem;
+            color: var(--color-accent);
+            display: none;
+        }
+
+        .faq-item.active .faq-a {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .contact-wrap {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header
+        style="background: var(--color-bg); mix-blend-mode: normal; color: var(--color-text); border-bottom: 1px solid var(--color-light-gray);">
+        <div class="logo"><a href="index.html">Banyon Street</a></div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="lookbook.html">Lookbook</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="cart-icon">
+            <a href="#">Cart (0)</a>
+        </div>
+    </header>
+
+    <main class="contact-wrap fade-in">
+        <div class="contact-info">
+            <h1>Reach Out</h1>
+            <div class="info-block">
+                <h4>General Inquiries</h4>
+                <p>info@banyonstreet.com</p>
+            </div>
+            <div class="info-block">
+                <h4>Press & Partnerships</h4>
+                <p>press@banyonstreet.com</p>
+            </div>
+            <div class="info-block">
+                <h4>Social</h4>
+                <p><a href="#">Instagram</a> / <a href="#">TikTok</a></p>
+            </div>
+            <div class="info-block">
+                <h4>Location</h4>
+                <p>AUSTIN, TX</p>
+            </div>
+
+            <div class="faq">
+                <h3>FAQ</h3>
+                <div class="faq-item">
+                    <div class="faq-q">When do orders ship? <span>+</span></div>
+                    <div class="faq-a">Please allow 3-5 business days for order processing and verification, and an additional 7-10 business days for delivery. We are not responsible for any lost, stolen, or damaged shipments. The buyer assumes all responsibilities of claims made with the shipping carrier.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">What is your return policy? <span>+</span></div>
+                    <div class="faq-a">We accept returns within 14 days of delivery for unworn garments in original
+                        condition.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">Do you ship internationally? <span>+</span></div>
+                    <div class="faq-a">Yes, we offer worldwide shipping. Rates are calculated at checkout.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-form-area">
+            <form class="contact-form">
+                <div class="form-group">
+                    <input type="text" placeholder="Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Order Number (Optional)">
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Your Message" required></textarea>
+                </div>
+                <button type="button" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        document.querySelectorAll('.faq-q').forEach(q => {
+            q.addEventListener('click', () => {
+                const item = q.parentElement;
+                item.classList.toggle('active');
+                q.querySelector('span').textContent = item.classList.contains('active') ? '-' : '+';
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
